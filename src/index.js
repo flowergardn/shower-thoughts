@@ -5,7 +5,7 @@ router.cors()
 
 async function getPost() {
     const response = await fetch(
-        `https://www.reddit.com/r/ShowerThoughts.json?sort=new&t=all&limit=50`
+        `https://www.reddit.com/r/ShowerThoughts.json?sort=new&t=all&limit=100`
     )
     const data = await response.json()
     const posts = data.data.children
