@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
     }
 
     // Set the post value to true, so that we know that the post has already been generated
-    await THOUGHTS.put(post.id, true);
+    await THOUGHTS.put(post.id, true, { expirationTtl: 600 });
 
     res.body = {
         data: post,
