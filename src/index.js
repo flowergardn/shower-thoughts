@@ -3,9 +3,9 @@ const router = new Router()
 
 router.cors()
 
-async function getPost() {
+async function getPost(sort, limit) {
     const response = await fetch(
-        `https://www.reddit.com/r/ShowerThoughts.json?sort=new&t=all&limit=100`
+        `https://www.reddit.com/r/ShowerThoughts.json?sort=${sort}&t=all&limit=${limit}`
     )
     const data = await response.json()
     const posts = data.data.children
@@ -13,7 +13,10 @@ async function getPost() {
 }
 
 router.get('/', async (req, res) => {
-    let post = await getPost();
+    const sort = req.query.get('sort') || 'new'
+    const limit = req.query.get('limit') || 100
+
+    let post = await getPost(sort, limit);
 
     let postValue = await THOUGHTS.get(post.id);
 
