@@ -1,0 +1,11 @@
+name = "shower-thoughts"
+type = "webpack"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2022-09-04"
+kv_namespaces = [
+       { binding = "THOUGHTS", id = "8fc9c612a4e74f71bad2e69179b2d333" }
+]
+

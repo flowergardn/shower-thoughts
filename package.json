@@ -1,0 +1,18 @@
+{
+    "name": "shower-thoughts",
+    "version": "1.0.0",
+    "description": "A simple Cloudflare worker for shower thoughts",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier --write '**/*.{js,css,json,md}'"
+    },
+    "devDependencies": {
+        "prettier": "^1.17.0"
+    },
+    "dependencies": {
+        "@tsndr/cloudflare-worker-router": "^1.1.1",
+        "axios": "^0.27.2",
+        "serverless-cloudflare-workers": "^1.2.0"
+    }
+}
