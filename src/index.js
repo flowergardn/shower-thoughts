@@ -13,8 +13,8 @@ async function getPost(sort, limit) {
 }
 
 router.get('/', async (req, res) => {
-    const sort = req.query.get('sort') || 'new'
-    const limit = req.query.get('limit') || 100
+    const sort = req.query.sort || 'new'
+    const limit = req.query.limit || 100
 
     let post = await getPost(sort, limit);
 

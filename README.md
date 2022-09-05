@@ -8,10 +8,10 @@ A fetch request is made once the API is called. The response is parsed and data 
 
 ### Usage
 
-The API is available at `https://shower-thoughts.workers.dev/`.
+The API is available at `https://shower-thoughts.paintbrush.workers.dev/`.
 
 ```bash
-curl https://shower-thoughts.workers.dev/
+curl https://shower-thoughts.paintbrush.workers.dev/
 ```
 
 ```json
@@ -24,3 +24,8 @@ curl https://shower-thoughts.workers.dev/
   }
 }
 ```
+
+### Caveats
+
+- The API may get rate limited by Reddit (unlikely, but possible).
+- The API may get congested and not return data. This is due to how we "cache" posts, as there's unfortunately not unlimited posts in the subreddit.
